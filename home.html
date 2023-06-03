@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    Đây là trang chủ
+    <p> Xin chào <span style="color: red" id="username"></span></p>
+    <button onclick="logout()">Logout</button>
+    <script>
+        let username = window.localStorage.getItem("user");
+        document.getElementById("username").innerText = username;
+
+        function logout() {
+            window.location.href = "login.html"
+        }
+    </script>
+</body>
+</html>

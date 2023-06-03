@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Click off
+        the Light</button>
+    <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Click on the
+        Light</button> -->
+
+        <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+        <button type="button" onclick="onofflight()" id="btnOnOff">ON</button>
+        
+        <script>
+            let isShow = false;
+        
+            function onofflight(){
+                if(!isShow){
+                    document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulbon.gif";
+                    isShow = true;
+                    document.getElementById("btnOnOff").innerText="OFF";
+                }else{
+                    document.getElementById("myImage").src ="https://www.w3schools.com/js/pic_bulboff.gif";
+                    isShow = false;
+                    document.getElementById("btnOnOff").innerText="ON";
+                }
+                    
+            }
+            
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formUser">
+        <input type="text" id="username" placeholder="Nhập User">
+        <p>(Độ dài tối thiểu 4 kí tự)</p>
+        <input type="password" id="password" placeholder="Nhập password">
+        <p>(Độ dài tối thiểu 6 kí tự)</p>
+    </form>
+    <button id="login" onclick="kiemtraUser()">Login</button>
+    <script>
+        function kiemtraUser() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let a = (username.length);
+            let b = (password.length);
+            console.log(a, b);
+            if (a <= 3 || b <= 5) {
+                result = "Dữ liệu nhập vào không hợp lệ";
+            } else {
+                if (username == "admin" && password == "123456") {
+                    result = "Đăng nhập thành công";
+                    window.localStorage.setItem("user", username);
+                    window.location.href = "homex.html"
+                } else {
+                    result = "Đăng nhập không thành công";
+                }
+            }
+            alert(result);
+        }
+    </script>
+</body>
+
+</html>
